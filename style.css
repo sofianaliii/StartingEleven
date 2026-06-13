@@ -1,0 +1,139 @@
+* html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Michroma";
+
+  background-image: url("assets/stadion.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+}
+
+/* navbar start */
+.container-navbar {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.wrapper-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+
+.navbar {
+  background-color: rgba(4, 68, 15, 0.822);
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 60%;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.text-navbar {
+  letter-spacing: 3px;
+  font-size: 2em;
+  margin: 0;
+  padding: 10px 30px;
+}
+
+.svanlogo {
+  filter: drop-shadow(0 0 10px #000);
+  height: 135px;
+  width: 135px;
+}
+/* navbar end */
+
+/* section start */
+main {
+  display: flex;
+  gap: 15px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.field {
+  position: relative;
+  overflow: hidden; /* <-- tambahkan agar bg ter-clipping sesuai border-radius */
+  background-color: rgba(0, 88, 26, 0.507);
+  box-shadow: 0 0 10px #000;
+  margin: auto;
+  padding: 30px;
+  width: 100%;
+  border-radius: 7px;
+}
+
+.field::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-image: url("assets/lapangansvan-01.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;         
+  background-position: center; 
+  opacity: 0.6;
+  z-index: -1;
+  pointer-events: none;
+  border-radius: inherit; /* <-- pastikan pseudo-element ikut melengkung */
+}
+
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.icon {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.icon i {
+  font-size: 2.7em;
+  padding: 5px;
+  filter: drop-shadow(0 0 3px #008f18);
+}
+
+.icon i:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  color: rgb(0, 204, 68);
+}
+
+.icon p {
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 0.5em;
+  letter-spacing: 2px;
+}
+
+/* section end */
+
+
+@media screen and (max-width: 500px) {
+    main {
+  width: 95%;
+  height: 40%;
+}
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1800px) {
+
+}
